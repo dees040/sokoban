@@ -7,11 +7,6 @@ namespace Sokoban
 {
     public class Wall : Field
     {
-        public Wall(Field top, Field right, Field bottom, Field left) : base(top, right, bottom, left)
-        {
-
-        }
-
         public override string Character
         {
             get { return "█"; }

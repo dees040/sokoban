@@ -19,10 +19,16 @@ namespace Sokoban
 
             if (action.ToLower() == "s")
             {
-                return;
+                Console.WriteLine("> Sokoban is being stopped. Press enter to leave.");
+                Console.ReadLine();
+                Environment.Exit(0);
             }
 
             _maze = _parser.Handle(int.Parse(action));
+
+            outputView.PrintMaze(_maze.GetTopLeftField());
+
+            Console.ReadLine();
         }
 
         /// <summary>

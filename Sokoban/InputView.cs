@@ -37,14 +37,37 @@ namespace Sokoban
                 return false;
             }
 
-            int mazeNumber = int.Parse(input);
+            int mazeNumber;
 
-            return mazeNumber < 1 && mazeNumber > 4;
+            try
+            {
+                mazeNumber = int.Parse(input);
+            } catch (Exception e)
+            {
+                return true;
+            }
+
+            return mazeNumber < 1 || mazeNumber > 4;
         }
 
         private void PrintWelcomeMessage()
         {
+            string message = "" +
+            "┌────────────────────────────────────────────────────┐\n" +
+            "│ Welkom bij Sokoban                                 │\n" +
+            "│                                                    │\n" +
+            "│ Betekenis van de symbolen   │   Doel van het spel  │\n" +
+            "│                             │                      │\n" +
+            "│ spatie : outerspace         │   Duw met de truck   │\n" +
+            "│      █ : muur               │   de krat(ten)       │\n" +
+            "│      . : vloer              │   naar de bestemming │\n" +
+            "│      # : krat               │                      │\n" +
+            "│      0 : krat op bestemming │                      │\n" +
+            "│      x : bestemming         │                      │\n" +
+            "│      @ : truck              │                      │\n" +
+            "└─────────────────────────────┴──────────────────────┘\n";
 
+            Console.WriteLine(message);
         }
     }
 }

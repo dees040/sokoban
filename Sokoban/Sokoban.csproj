@@ -42,11 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller.cs" />
     <Compile Include="Destination.cs" />
     <Compile Include="Maze.cs" />
-    <Compile Include="GameView.cs" />
-    <Compile Include="Box.cs" />
-    <Compile Include="EmptyField.cs" />
+    <Compile Include="InputView.cs" />
+    <Compile Include="Floor.cs" />
+    <Compile Include="Outerspace.cs" />
+    <Compile Include="OutputView.cs" />
+    <Compile Include="StandableField.cs" />
+    <Compile Include="Trap.cs" />
     <Compile Include="Wall.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Program.cs" />

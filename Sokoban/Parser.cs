@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace Sokoban
@@ -9,14 +11,103 @@ namespace Sokoban
     {
         public Maze Handle(int mazeToLoad)
         {
-            Field field = new EmptyField(null, null, null, null);
+            string[] lines = ReadFile(mazeToLoad);
 
-            return new Maze(field);
+            Field forkliftLocation = null, left = null, above = null;
+
+            foreach (string line in lines)
+            {
+                foreach (char c in line)
+                {
+                    Field field = CharToField(c);
+
+                    if (field == null)
+                    {
+                        field = new Floor();
+                        forkliftLocation = field;
+                    }
+
+                    SetFieldNeighbours(field, above, left);
+
+                    left = field;
+                    above = GetNextAbove(above);
+                }
+
+                above = GetFirstOfCurrentRow(left);
+            }
+
+            return new Maze(forkliftLocation);
         }
 
-        private String readFile()
+        private void SetFieldNeighbours(Field newField, Field top, Field left)
         {
-            return "";
+            if (top != null)
+            {
+                newField.TopNeighbour = top;
+                top.BottomNeighbour = newField;
+            }
+
+            if (left != null)
+            {
+                newField.LeftNeighbour = left;
+                left.RightNeighbour = newField;
+            }
+        }
+
+        private Field GetFirstOfCurrentRow(Field field)
+        {
+            while (field.LeftNeighbour != null)
+            {
+                field = field.LeftNeighbour;
+            }
+
+            return field;
+        }
+
+        private Field GetNextAbove(Field above)
+        {
+            if (above == null)
+            {
+                return null;
+            }
+
+            return above.RightNeighbour;
+        }
+
+        private Field CharToField(char c)
+        {
+            switch (c)
+            {
+                case ' ':
+                    return new Outerspace();
+                case '#':
+                    return new Wall();
+                case '.':
+                    return new Floor();
+                case 'o':
+                    Field field = new Floor();
+                    field.HasBox = true;
+
+                    return field;
+                case 'x':
+                    return new Destination();
+                case '@':
+                    return null;
+                case '~':
+                    return new Trap();
+                default:
+                    throw new Exception("Unkonwn character.");
+            }
+        }
+
+        private string[] ReadFile(int id)
+        {
+            string fileName = "doolhof" + id + ".txt";
+            string path = Path.GetDirectoryName(Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()));
+
+            string[] lines = File.ReadAllLines(path + "\\Mazes\\" + fileName);
+
+            return lines;
         }
     }
 }

@@ -5,11 +5,11 @@ using System.Text;
 
 namespace Sokoban
 {
-    public class Destination : StandableField
+    public abstract class StandableField : Field
     {
-        public override string Character
+        public override bool Standable()
         {
-            get { return HasBox ? "0" : "O"; }
+            return true;
         }
     }
 }

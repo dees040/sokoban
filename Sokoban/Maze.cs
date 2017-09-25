@@ -10,14 +10,11 @@ namespace Sokoban
         Forklift _forklift;
         private int _movements = 0;
 
+        public Forklift ForkLift { get; }
+
         public Maze(Field forkliftLocation)
         {
             _forklift = new Forklift(forkliftLocation);
-        }
-
-        public void Push(Box box, Direction direction)
-        {
-            throw new System.NotImplementedException();
         }
 
         public void Print()
@@ -25,9 +22,21 @@ namespace Sokoban
             throw new System.NotImplementedException();
         }
 
-        private Field GetTopLeftField()
+        public Field GetTopLeftField()
         {
-            throw new System.NotImplementedException();
+            Field field = _forklift._location;
+
+            while (field.LeftNeighbour != null)
+            {
+                field = field.LeftNeighbour;
+            }
+
+            while (field.TopNeighbour != null)
+            {
+                field = field.TopNeighbour;
+            }
+
+            return field;
         }
     }
 }
