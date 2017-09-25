@@ -1,0 +1,7 @@
+C:\Users\Days\Desktop\School\model3\Sokoban\Sokoban\obj\Debug\Sokoban.csprojResolveAssemblyReference.cache
+C:\Users\Days\Desktop\School\model3\Sokoban\Sokoban\obj\Debug\Sokoban.csproj.CoreCompileInputs.cache
+C:\Users\Days\Desktop\School\model3\Sokoban\Sokoban\bin\Debug\Sokoban.exe.config
+C:\Users\Days\Desktop\School\model3\Sokoban\Sokoban\bin\Debug\Sokoban.exe
+C:\Users\Days\Desktop\School\model3\Sokoban\Sokoban\bin\Debug\Sokoban.pdb
+C:\Users\Days\Desktop\School\model3\Sokoban\Sokoban\obj\Debug\Sokoban.exe
+C:\Users\Days\Desktop\School\model3\Sokoban\Sokoban\obj\Debug\Sokoban.pdb
