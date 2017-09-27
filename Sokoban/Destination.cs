@@ -9,7 +9,7 @@ namespace Sokoban
     {
         public override string Character
         {
-            get { return HasBox ? "0" : "O"; }
+            get { return HasBox ? "0" : "x"; }
         }
     }
 }

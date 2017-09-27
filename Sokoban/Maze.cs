@@ -7,24 +7,19 @@ namespace Sokoban
 {
     public class Maze
     {
-        Forklift _forklift;
+        private Field _forkLift;
         private int _movements = 0;
 
-        public Forklift ForkLift { get; }
+        public Field ForkLift { get; set; }
 
         public Maze(Field forkliftLocation)
         {
-            _forklift = new Forklift(forkliftLocation);
-        }
-
-        public void Print()
-        {
-            throw new System.NotImplementedException();
+            ForkLift = forkliftLocation;
         }
 
         public Field GetTopLeftField()
         {
-            Field field = _forklift._location;
+            Field field = ForkLift;
 
             while (field.LeftNeighbour != null)
             {

@@ -7,23 +7,31 @@ namespace Sokoban
 {
     public class OutputView
     {
-        public void PrintMaze(Field field)
+        public void PrintMaze(Field field, Field forkliftLocation)
         {
-            while (field.BottomNeighbour != null)
+            Clear();
+
+            while (field != null)
             {
-                Field nextBottom = field.BottomNeighbour;
+                Field rightField = field;
                 String line = "";
 
-                while (field.RightNeighbour != null)
+                while (rightField != null)
                 {
-                    line += field.ToString();
+                    line += (rightField == forkliftLocation) ? "@" : rightField.ToString();
 
-                    field = field.RightNeighbour;
+                    rightField = rightField.RightNeighbour;
                 }
 
-                field = nextBottom;
-                Console.WriteLine(line + "\n");
+                field = field.BottomNeighbour;
+                Console.WriteLine(line);
             }
+        }
+
+        public void Clear()
+        {
+            Console.Clear();
+            Console.WriteLine("");
         }
     }
 }

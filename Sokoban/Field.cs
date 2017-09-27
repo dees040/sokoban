@@ -13,6 +13,7 @@ namespace Sokoban
         protected Field _leftNeighbour;
 
         protected bool _hasBox;
+        protected bool _hasForkLift;
 
         public abstract string Character { get; }
 
@@ -22,14 +23,19 @@ namespace Sokoban
         public Field LeftNeighbour { get; set; }
 
         public bool HasBox { get; set; }
+        public bool HasForkLift { get; set; }
 
         public abstract bool Standable();
 
         public override string ToString()
         {
-            if (_hasBox && this.GetType().Name != "Destination")
+            if (HasForkLift)
             {
-                return "#";
+                return "@";
+            }
+            else if (HasBox && this.GetType().Name != "Destination")
+            {
+                return "o";
             }
 
             return Character;

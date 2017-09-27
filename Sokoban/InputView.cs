@@ -42,7 +42,7 @@ namespace Sokoban
             try
             {
                 mazeNumber = int.Parse(input);
-            } catch (Exception e)
+            } catch
             {
                 return true;
             }

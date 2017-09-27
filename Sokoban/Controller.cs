@@ -26,7 +26,7 @@ namespace Sokoban
 
             _maze = _parser.Handle(int.Parse(action));
 
-            outputView.PrintMaze(_maze.GetTopLeftField());
+            outputView.PrintMaze(_maze.GetTopLeftField(), _maze.ForkLift);
 
             Console.ReadLine();
         }

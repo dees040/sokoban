@@ -9,7 +9,7 @@ namespace Sokoban
     {
         public override string Character
         {
-            get { return "█"; }
+            get { return "#"; }
         }
 
         public override bool Standable()

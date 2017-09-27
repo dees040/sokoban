@@ -1,30 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Class Name="Sokoban.Forklift">
-    <Position X="3.25" Y="9.25" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
-      <FileName>Forklift.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="_location" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="Sokoban.Field">
     <Position X="7.75" Y="8.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAQAAgEAEAAEAAAAAAAAABAAAAAAQACAAAQACCQ=</HashCode>
+      <HashCode>AAABAAQAAgEAEAAEIAAAAAAAABAAAAAAQACAAAQACCQ=</HashCode>
       <FileName>Field.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Maze">
-    <Position X="8" Y="5.5" Width="2.75" />
+    <Position X="3.25" Y="8.25" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAIAAAAAADAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAIAAAAAADAAAAAAAAAAA=</HashCode>
       <FileName>Maze.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="_forklift" />
+      <Field Name="_forkLift" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.Wall">
@@ -49,21 +39,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.InputView">
-    <Position X="5.75" Y="0.5" Width="2.5" />
+    <Position X="4.25" Y="1.25" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAEAAEAAAABAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Program" Collapsed="true">
-    <Position X="4.5" Y="3.5" Width="1.5" />
+    <Position X="2.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Parser">
-    <Position X="12.75" Y="3.25" Width="4" />
+    <Position X="10" Y="4.5" Width="4" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAAAAAACgAEAAAQIAAAAAAAAAAAA=</HashCode>
       <FileName>Parser.cs</FileName>
@@ -77,7 +67,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Controller">
-    <Position X="8.75" Y="3.25" Width="2.25" />
+    <Position X="6.25" Y="4.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAgAACAAEAAAQAAAAAAAAAAAA=</HashCode>
       <FileName>Controller.cs</FileName>
@@ -90,9 +80,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.OutputView">
-    <Position X="10.25" Y="0.75" Width="1.5" />
+    <Position X="8.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAABAAAA=</HashCode>
       <FileName>OutputView.cs</FileName>
     </TypeIdentifier>
   </Class>

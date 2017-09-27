@@ -21,9 +21,8 @@ namespace Sokoban
                 {
                     Field field = CharToField(c);
 
-                    if (field == null)
+                    if (field.HasForkLift)
                     {
-                        field = new Floor();
                         forkliftLocation = field;
                     }
 
@@ -34,6 +33,7 @@ namespace Sokoban
                 }
 
                 above = GetFirstOfCurrentRow(left);
+                left = null;
             }
 
             return new Maze(forkliftLocation);
@@ -85,14 +85,17 @@ namespace Sokoban
                 case '.':
                     return new Floor();
                 case 'o':
-                    Field field = new Floor();
-                    field.HasBox = true;
+                    Field box = new Floor();
+                    box.HasBox = true;
 
-                    return field;
+                    return box;
                 case 'x':
                     return new Destination();
                 case '@':
-                    return null;
+                    Field forkLift = new Floor();
+                    forkLift.HasForkLift = true;
+
+                    return forkLift;
                 case '~':
                     return new Trap();
                 default:
