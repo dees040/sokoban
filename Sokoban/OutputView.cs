@@ -11,6 +11,7 @@ namespace Sokoban
         {
             while (field.BottomNeighbour != null)
             {
+                Field nextBottom = field.BottomNeighbour;
                 String line = "";
 
                 while (field.RightNeighbour != null)
@@ -20,8 +21,8 @@ namespace Sokoban
                     field = field.RightNeighbour;
                 }
 
-                field = field.BottomNeighbour;
-                Console.WriteLine(line);
+                field = nextBottom;
+                Console.WriteLine(line + "\n");
             }
         }
     }
