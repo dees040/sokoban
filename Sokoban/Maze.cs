@@ -8,14 +8,25 @@ namespace Sokoban
     public class Maze
     {
         private Field _forkLift;
-        private int _movements = 0;
+        private int _desitnationAmount = 0;
+        private int _desitnationReached = 0;
 
-        public Field ForkLift { get; set; }
+        public Field ForkLift {
+            get { return _forkLift; }
+            set
+            {
+                if (_forkLift != null)
+                {
+                    _forkLift.HasForkLift = false;
+                }
 
-        public Maze(Field forkliftLocation)
-        {
-            ForkLift = forkliftLocation;
+                _forkLift = value;
+                _forkLift.HasForkLift = true;
+            }
         }
+        public int DesitnationAmount { get; set; }
+        public int DesitnationReached { get; set; }
+
 
         public Field GetTopLeftField()
         {
@@ -32,6 +43,11 @@ namespace Sokoban
             }
 
             return field;
+        }
+
+        public bool isFinished()
+        {
+            return DesitnationAmount == DesitnationReached;
         }
     }
 }

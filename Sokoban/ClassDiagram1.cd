@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="Sokoban.Field">
-    <Position X="7.75" Y="8.5" Width="2.75" />
+    <Position X="7.75" Y="7.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAABAAQAAgEAEAAEIAAAAAAAABAAAAAAQACAAAQACCQ=</HashCode>
+      <HashCode>AAABEAQAAgEAEAAEIAAAAAAAABAAAAAAQACQAAQACCQ=</HashCode>
       <FileName>Field.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -41,7 +41,7 @@
   <Class Name="Sokoban.InputView">
     <Position X="4.25" Y="1.25" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAEAAAABAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAEAAAABAAAAAABACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -69,7 +69,7 @@
   <Class Name="Sokoban.Controller">
     <Position X="6.25" Y="4.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAgAACAAEAAAQAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAQAAIAAAAAAAACAgAACAAEAAAQAgAAAAAAAAAA=</HashCode>
       <FileName>Controller.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -101,7 +101,7 @@
     </TypeIdentifier>
   </Class>
   <Enum Name="Sokoban.Direction">
-    <Position X="12.5" Y="8.5" Width="1.5" />
+    <Position X="11.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAIAAAACACAAAAAAAA=</HashCode>
       <FileName>Direction.cs</FileName>

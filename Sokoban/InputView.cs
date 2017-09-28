@@ -50,6 +50,27 @@ namespace Sokoban
             return mazeNumber < 1 || mazeNumber > 4;
         }
 
+        public Direction ReadDirectionKey()
+        {
+            ConsoleKeyInfo keyInfo = Console.ReadKey();
+
+            switch (keyInfo.Key)
+            {
+                case ConsoleKey.UpArrow:
+                    return Direction.Top;
+                case ConsoleKey.RightArrow:
+                    return Direction.Right;
+                case ConsoleKey.DownArrow:
+                    return Direction.Bottom;
+                case ConsoleKey.LeftArrow:
+                    return Direction.Left;
+                default:
+                    Console.WriteLine("Provide an arrow key (direction): ");
+
+                    return ReadDirectionKey();
+            }
+        }
+
         private void PrintWelcomeMessage()
         {
             string message = "" +

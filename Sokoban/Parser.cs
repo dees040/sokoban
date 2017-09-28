@@ -9,21 +9,26 @@ namespace Sokoban
 {
     public class Parser
     {
-        public Maze Handle(int mazeToLoad)
+        public Maze Handle(int mazeToLoad, EventHandler HandleBoxMovement)
         {
+            Maze maze = new Maze();
+            Field left = null, above = null;
             string[] lines = ReadFile(mazeToLoad);
-
-            Field forkliftLocation = null, left = null, above = null;
 
             foreach (string line in lines)
             {
                 foreach (char c in line)
                 {
                     Field field = CharToField(c);
+                    field.BoxOverDestinationMovement += HandleBoxMovement;
 
                     if (field.HasForkLift)
                     {
-                        forkliftLocation = field;
+                        maze.ForkLift = field;
+                    } 
+                    else if (field.HasBox)
+                    {
+                        maze.DesitnationAmount++;
                     }
 
                     SetFieldNeighbours(field, above, left);
@@ -36,7 +41,7 @@ namespace Sokoban
                 left = null;
             }
 
-            return new Maze(forkliftLocation);
+            return maze;
         }
 
         private void SetFieldNeighbours(Field newField, Field top, Field left)

@@ -11,6 +11,10 @@ namespace Sokoban
         static void Main(string[] args)
         {
             Controller controller = new Controller();
+
+            controller.Play();
+
+            Main(args);
         }
     }
 }

@@ -15,6 +15,8 @@ namespace Sokoban
         protected bool _hasBox;
         protected bool _hasForkLift;
 
+        public event EventHandler BoxOverDestinationMovement;
+
         public abstract string Character { get; }
 
         public Field TopNeighbour { get; set; }
@@ -22,8 +24,35 @@ namespace Sokoban
         public Field BottomNeighbour { get; set; }
         public Field LeftNeighbour { get; set; }
 
-        public bool HasBox { get; set; }
+        public bool HasBox {
+            get { return _hasBox; }
+            set
+            {
+                _hasBox = value;
+                if (this.GetType().Name == "Destination")
+                {
+                    BoxOverDestinationMovement?.Invoke(this, EventArgs.Empty);
+                }
+            }
+        }
         public bool HasForkLift { get; set; }
+
+        public Field GetNeighbour(Direction direction)
+        {
+            switch (direction)
+            {
+                case Direction.Top:
+                    return TopNeighbour;
+                case Direction.Right:
+                    return RightNeighbour;
+                case Direction.Bottom:
+                    return BottomNeighbour;
+                case Direction.Left:
+                    return LeftNeighbour;
+                default:
+                    return null;
+            }
+        }
 
         public abstract bool Standable();
 
