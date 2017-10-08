@@ -52,6 +52,11 @@ namespace Sokoban
         {
             Field toGo = _maze.ForkLift.GetNeighbour(direction);
 
+            if (toGo.GetType().Name == "Trap")
+            {
+                ((Trap)toGo).MovedOver();
+            }
+
             if (toGo.HasBox)
             {
                 MoveWithBox(direction, toGo);
@@ -78,11 +83,24 @@ namespace Sokoban
             if (toGo.HasBox)
             {
                 Play("> Their is another box in the way.");
-
+                
                 return;
             }
 
-            if (toGo.Standable())
+            if (toGo.GetType().Name == "Trap")
+            {
+                int health = ((Trap)toGo).MovedOver();
+                if (health >= 0)
+                {
+                    toGo.HasBox = true;
+                }
+
+                box.HasBox = false;
+                _maze.ForkLift = box;
+
+                Play();
+            }
+            else if (toGo.Standable())
             {
                 _maze.ForkLift = box;
                 box.HasBox = false;

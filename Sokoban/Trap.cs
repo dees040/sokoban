@@ -16,5 +16,14 @@ namespace Sokoban
                 return health == 0 ? " " : "~";
             }
         }
+
+        public int MovedOver()
+        {
+            if (health != 0)
+            {
+                health = health - 1;
+            }
+            return health;
+        }
     }
 }
