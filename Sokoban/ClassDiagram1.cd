@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="Sokoban.Field">
-    <Position X="7.75" Y="7.5" Width="2.75" />
+    <Position X="7.75" Y="7.5" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAABEAQAAgEAEAAEIAAAAAAAABAAAAAAQACQAAQACCQ=</HashCode>
       <FileName>Field.cs</FileName>
@@ -10,7 +13,7 @@
   <Class Name="Sokoban.Maze">
     <Position X="3.25" Y="8.25" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAIAAAAAADAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAgACAAAAAAAIAAAQAADAAAEAAQAAAA=</HashCode>
       <FileName>Maze.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -46,14 +49,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Program" Collapsed="true">
-    <Position X="2.75" Y="4.5" Width="1.5" />
+    <Position X="3" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Parser">
-    <Position X="10" Y="4.5" Width="4" />
+    <Position X="11.75" Y="4.75" Width="4.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAAAAAACgAEAAAQIAAAAAAAAAAAA=</HashCode>
       <FileName>Parser.cs</FileName>
@@ -62,12 +65,12 @@
   <Class Name="Sokoban.Trap">
     <Position X="15.25" Y="13.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAg=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAg=</HashCode>
       <FileName>Trap.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Controller">
-    <Position X="6.25" Y="4.75" Width="2.25" />
+    <Position X="6.25" Y="4.75" Width="4.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAQAAIAAAAAAAACAgAACAAEAAAQAgAAAAAAAAAA=</HashCode>
       <FileName>Controller.cs</FileName>
@@ -80,14 +83,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.OutputView">
-    <Position X="8.25" Y="1" Width="1.5" />
+    <Position X="8.25" Y="1" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAABAAAA=</HashCode>
       <FileName>OutputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.StandableField">
-    <Position X="13" Y="11.5" Width="1.5" />
+    <Position X="13" Y="11.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
       <FileName>StandableField.cs</FileName>

@@ -98,7 +98,15 @@ namespace Sokoban
                 box.HasBox = false;
                 _maze.ForkLift = box;
 
-                Play();
+                if (health < 0)
+                {
+                    outputView.PrintMaze(_maze.GetTopLeftField(), _maze.ForkLift);
+                    Console.WriteLine("Game Over..");
+                }
+                else
+                {
+                    Play();
+                }
             }
             else if (toGo.Standable())
             {

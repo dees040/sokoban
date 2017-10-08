@@ -13,16 +13,14 @@ namespace Sokoban
         {
             get
             {
-                return health == 0 ? " " : "~";
+                return health <= 0 ? " " : "~";
             }
         }
 
         public int MovedOver()
         {
-            if (health != 0)
-            {
-                health = health - 1;
-            }
+            health--;
+
             return health;
         }
     }
